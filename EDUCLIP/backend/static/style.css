@@ -1,0 +1,275 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+form {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+#result {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.video-details {
+    padding: 15px;
+}
+
+.video-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.channel-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.channel-name {
+    font-size: 14px;
+    color: #555;
+}
+
+button#loadMore {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #cc0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#loadMore:hover {
+    background-color: #cc0000;
+}
+
+/* Main container for the two sections */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Video Search Section - 70% */
+.video-search-section {
+    flex: 70%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Chatbot Section */
+.chatbot-section {
+    flex: 30%;
+    /* Fixed width for the summarizer section */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+    /* Enable vertical scroll only */
+    overflow-x: hidden;
+    /* Remove horizontal scroll */
+    height: 100vh;
+    /* Full height */
+    box-sizing: border-box;
+}
+
+/* Chatbot Loader Styling */
+#chatbotLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    
+}
+
+#chatbotLoader img {
+    width: 150px;
+    /* Smaller loader */
+    height: 150px;
+}
+
+#chatbotLoader p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+/* Chatbot Response Styling */
+#chatbotResponse {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-y: auto;
+    /* Enable vertical scrolling for the summary */
+    max-height: 500px;
+    /* Fixed max height for summary area */
+}
+
+/* Summary Card Styling */
+.summary-card {
+    display: block;
+    /* Stack cards vertically */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    /* Space between cards */
+    text-align: center;
+}
+
+.summary-thumbnail {
+    width: 100%;
+    /* Thumbnail takes full card width */
+    max-height: 200px;
+    /* Fixed thumbnail height */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.summary-details h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.summary-details p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.header {
+    background-color: #cc0000;
+    /* Add your desired background color */
+    color: #ffffff;
+    /* Text color for better contrast */
+    padding: 1px 0;
+    /* Add some padding for spacing */
+    text-align: center;
+    /* Center align the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow for depth */
+}
+
+.header-container {
+    max-width: 1200px;
+    /* Limit the width of the content */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 0 15px;
+    /* Add horizontal padding */
+}
+
+.header-title {
+    font-size: 2rem;
+    /* Increase the font size for prominence */
+    font-weight: bold;
+    /* Make the title bold */
+    text-transform: uppercase;
+    /* Convert the title to uppercase */
+    letter-spacing: 2px;
+    /* Add spacing between letters */
+    color: #ddd;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Video Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<!-- Header Section -->
+<header class="header">
+    <div class="header-container">
+        <h1 class="header-title">EduClip</h1>
+    </div>
+</header>
+
+    <div class="main-container">
+        <!-- Video Search Section -->
+        <div class="video-search-section">
+            <h1>Search for Educational Videos</h1>
+            <form id="searchForm">
+                <input type="text" id="query" placeholder="Enter search term" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="result"></div>
+            <button id="loadMore" style="display: none;">Load More</button>
+        </div>
+
+        <!-- Chatbot Section -->
+        <div class="chatbot-section">
+            <h2>Video Summarizer</h2>
+            <form id="summarizeForm">
+                <input type="text" id="videoLink" placeholder="Paste YouTube video link" required>
+            </br>
+                <button type="submit">Summarize</button>
+            </form>
+            <div id="chatbotLoader" style="display: none;">
+                <img src="{{ url_for('static', filename='loader.gif') }}" alt="Loading..." />
+                <p>Summarizing... Please wait.</p>
+            </div>
+            <div id="chatbotResponse">
+                <div class="summary-container">
+                    <p><strong>Summary:</strong></p>
+                    <p>Please provide Link To Summarize</p>
+                </div>
+                <select id="languageDropdown" style="display: none;">
+                    <option value="">--Select Language--</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="hi">Hindi</option>
+                    <option value="de">German</option>
+                    <option value="zh">Chinese</option>
+                    <option value="kn">Kannada</option>
+                </select>
+            </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
