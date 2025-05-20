@@ -23,10 +23,10 @@ except FileNotFoundError:
     exit(1)
 
 # API and Model Configurations
-YOUTUBE_API_KEY = "AIzaSyCc1zkFfPwtyfJvaJKNGz-ybqR0uwKJcvg"
+YOUTUBE_API_KEY = "YOUTUBE_API_KEY"
 SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 DETAILS_URL = "https://www.googleapis.com/youtube/v3/videos"
-genai.configure(api_key="AIzaSyAKOrizNKRWiZzx5mgDbJzSYw6fGuTUq64")
+genai.configure(api_key="genai.configure api_key")
 
 RAPIDAPI_KEY = "6021132cdmshe727f84b6042f2bp1b692ejsn6a3a123c2014"  # Replace with your RapidAPI key
 RAPIDAPI_HOST = "microsoft-translator-text.p.rapidapi.com"  # API 
