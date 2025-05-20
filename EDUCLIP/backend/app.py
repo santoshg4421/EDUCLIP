@@ -28,7 +28,7 @@ SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 DETAILS_URL = "https://www.googleapis.com/youtube/v3/videos"
 genai.configure(api_key="genai.configure api_key")
 
-RAPIDAPI_KEY = "6021132cdmshe727f84b6042f2bp1b692ejsn6a3a123c2014"  # Replace with your RapidAPI key
+RAPIDAPI_KEY = ""  # Replace with your RapidAPI key
 RAPIDAPI_HOST = "microsoft-translator-text.p.rapidapi.com"  # API 
 
 
