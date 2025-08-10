@@ -5,7 +5,7 @@ import google.generativeai as genai
 import pickle
 import requests
 from pytube import YouTube
-from transformers import pipeline
+# from transformers import pipeline
 # from flask_cors import CORS
 
 # Initialize Flask app
@@ -18,8 +18,9 @@ app = Flask(__name__)
 try:
     with open("model.pkl", "rb") as f:
         vectorizer, model = pickle.load(f)
+    print("Model loaded successfully!")
 except FileNotFoundError:
-    print("Error: model.pkl file not found in 'backend' directory.")
+    print("Error: model.pkl file not found in current directory.")
     exit(1)
 
 # API and Model Configurations
